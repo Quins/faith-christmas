@@ -35,48 +35,61 @@
 }
 
 @font-face {
-  font-family: 'Calibri';
-  src: url('../fonts/Calibri.eot?#iefix') format('embedded-opentype'),  
-  	   url('../fonts/Calibri.woff') format('woff'), 
-  	   url('../fonts/Calibri.ttf')  format('truetype'), 
-  	   url('../fonts/Calibri.svg#Calibri') format('svg');
-  font-weight: normal;
-  font-style: normal;
+    font-family: 'posterizer_kg_roundedregular';
+    src: url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.eot');
+    src: url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.woff2') format('woff2'),
+         url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.woff') format('woff'),
+         url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.ttf') format('truetype'),
+         url('../fonts/Posterizer/posterizer_kg_-_posterizerkgrounded_0.svg#posterizer_kg_roundedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
 
-@mixin Calibri($font-size, $line-height) {
+@mixin posterizer($font-size, $line-height) {
 
-	font-family: "Calibri", Arial, sans-serif;
-	font-weight: normal;
-	font-size: $font-size;
-	line-height: $line-height;
+    font-family: "posterizer_kg_roundedregular", Arial, sans-serif;
+    font-weight: normal;
+    font-size: $font-size;
+    line-height: $line-height;
 }
 
 @font-face {
-	font-family: "Flaticon";
-	src: url("../fonts/flaticon.eot");
-	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
-	url("../fonts/flaticon.woff") format("woff"),
-	url("../fonts/flaticon.ttf") format("truetype"),
-	url("../fonts/flaticon.svg") format("svg");
-	font-weight: normal;
-	font-style: normal;
+    font-family: 'HelveticaNeue Regular';
+    src: url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.eot');
+    src: url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.woff2') format('woff2'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.woff') format('woff'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.ttf') format('truetype'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Medium.svg#posterizer_kg_roundedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
-[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
-	font-family: Flaticon;
-        font-size: 20px;
-font-style: normal;
-margin-left: 20px;
-}.flaticon-layout22:before {
-	content: "\e000";
+
+@mixin helveticaRegular($font-size, $line-height) {
+
+    font-family: "HelveticaNeue Regular", Arial, sans-serif;
+    font-weight: normal;
+    font-size: $font-size;
+    line-height: $line-height;
 }
-.flaticon-man216:before {
-	content: "\e001";
+
+@font-face {
+    font-family: 'HelveticaNeue Roman';
+    src: url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.eot');
+    src: url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.woff2') format('woff2'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.woff') format('woff'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.ttf') format('truetype'),
+         url('../fonts/Helvetica-Neue-Cyr/HelveticaNeueCyr-Roman.svg#posterizer_kg_roundedregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
 }
-.flaticon-sun79:before {
-	content: "\e002";
-}
-.flaticon-users6:before {
-	content: "\e003";
+
+@mixin helveticaRoman($font-size, $line-height) {
+
+    font-family: "HelveticaNeue Roman", Arial, sans-serif;
+    font-weight: normal;
+    font-size: $font-size;
+    line-height: $line-height;
 }
