@@ -99,6 +99,7 @@ a, a:hover {
     position: relative;
     padding: 20px 0 60px;
     text-align: center;
+    white-space: nowrap;
 }
 .l-intro-section {
     
@@ -346,7 +347,8 @@ a, a:hover {
 
                 display: block;
                 width: 60px;
-                @include helveticaRoman(17px, 60px);
+                height: 60px;
+                @include helveticaRoman(17px, 64px);
                 color: #fff;
                 text-decoration: none;  
                 border: 3px solid #fff;
@@ -426,7 +428,8 @@ a, a:hover {
         position: relative;
         padding: 5px 95px 5px 50px;
         display: inline-block;
-        @include posterizer(82px, normal);
+        height: 96px;
+        @include posterizer(82px, 110px);
         color: $color-mark;
         word-spacing: -7px;
         background-color: #fff;
