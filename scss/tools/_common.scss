@@ -1,0 +1,88 @@
+/* Common (common styles) */
+body, input, textarea, select, button {
+	
+	font-family: Arial, sans-serif;
+}
+
+html {
+
+	height: auto;
+	height: 100%;
+}
+
+body {
+
+	@include BaseFont(14px, 20px);
+	height: 100%;
+	position: relative;
+	text-rendering:              optimizelegibility;
+	font-smoothing:              antialiased;
+	-webkit-font-smoothing:      subpixel-antialiased !important;
+	-webkit-backface-visibility: hidden;
+	-moz-font-smoothing:         antialiased;
+	-moz-backface-visibility:    hidden;
+	-moz-osx-font-smoothing:     grayscale;
+	-ms-backface-visibility:     hidden;
+}
+
+body * {
+
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+input, textarea, select, button {
+	
+	font-size: 1em;
+}
+
+/* Overrides extra padding in Firefox */ 
+button::-moz-focus-inner { 
+	
+	padding: 0; 
+	border: none;
+}
+
+a, a:hover {
+
+	@include transition(.3s);
+}
+
+
+/* Global (global styles) / prefix - g- */
+
+.g-pseudo-link {
+	
+	border-bottom: 1px dashed;
+	text-decoration: none !important;
+	cursor: pointer;
+}
+
+.g-limited {
+	
+	/* min-width, max-width */
+}
+
+.g-cleaner {
+	
+	display: block;
+	clear: both;
+	height: 0;
+	overflow: hidden;
+	font-size: 0;
+	line-height: 0;
+}
+
+.g-cleared:after {
+	
+	display: block;
+	content: ".";
+	height: 0;
+	clear: both;
+	overflow: hidden;
+	visibility: hidden;
+}
+
+.g-hidden {
+	
+	display: none !important;
+}

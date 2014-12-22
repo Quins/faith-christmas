@@ -1,0 +1,82 @@
+// Fonts (including not standart fonts)
+
+//@font-face {
+	
+//	font: {
+//		family: "FontName";
+//		weight: 100;
+//		style: normal;
+//	}
+//	src: url("../fonts/FontName/regular.eot");
+//	src: url("../fonts/FontName/regular.eot?#iefix") format("embedded-opentype"),
+//		 url("../fonts/FontName/regular.woff") format("woff"),
+//		 url("../fonts/FontName/regular.ttf") format("truetype");
+//}
+
+//@mixin FontNameRegular($font-size, $line-height) {
+//	font-family: "FontName", Arial, sans-serif;
+//	font-weight: 100;
+//	font-size: $font-size;
+//	line-height: $line-height;
+//}
+
+@mixin BaseFont($font-size, $line-height) {
+
+	font-family: "Helvetica", Arial, sans-serif;
+	font-weight: normal;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@mixin Font($font-size, $line-height) {
+
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@font-face {
+  font-family: 'Calibri';
+  src: url('../fonts/Calibri.eot?#iefix') format('embedded-opentype'),  
+  	   url('../fonts/Calibri.woff') format('woff'), 
+  	   url('../fonts/Calibri.ttf')  format('truetype'), 
+  	   url('../fonts/Calibri.svg#Calibri') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@mixin Calibri($font-size, $line-height) {
+
+	font-family: "Calibri", Arial, sans-serif;
+	font-weight: normal;
+	font-size: $font-size;
+	line-height: $line-height;
+}
+
+@font-face {
+	font-family: "Flaticon";
+	src: url("../fonts/flaticon.eot");
+	src: url("../fonts/flaticon.eot#iefix") format("embedded-opentype"),
+	url("../fonts/flaticon.woff") format("woff"),
+	url("../fonts/flaticon.ttf") format("truetype"),
+	url("../fonts/flaticon.svg") format("svg");
+	font-weight: normal;
+	font-style: normal;
+}
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {   
+	font-family: Flaticon;
+        font-size: 20px;
+font-style: normal;
+margin-left: 20px;
+}.flaticon-layout22:before {
+	content: "\e000";
+}
+.flaticon-man216:before {
+	content: "\e001";
+}
+.flaticon-sun79:before {
+	content: "\e002";
+}
+.flaticon-users6:before {
+	content: "\e003";
+}
