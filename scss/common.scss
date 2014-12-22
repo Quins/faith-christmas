@@ -348,6 +348,22 @@ a, a:hover {
 			margin: 0 15px 0 0;
 			vertical-align: top;
 
+			&-currency {
+
+				position: relative;
+				font-size: 17px;
+				line-height: 17px;
+
+				&:before {
+
+					content: "\2013";
+					display: block;
+					position: absolute;
+					top: 20%;
+					left: 0;
+				}
+			}
+
 			&-link {
 
 				display: block;
@@ -484,12 +500,15 @@ a, a:hover {
 		&-title, &-clause {
 
 			display: inline-block;
+			vertical-align: top;
 			@include BaseFont(14px, 14px);
 			text-align: left;
 		}
 		&-title {
 			
 			max-width: 275px;
+			box-sizing: border-box;
+			padding: 0 10px 0 0;
 		}
 		&-clause {
 			
@@ -573,16 +592,16 @@ a, a:hover {
 		
 		&-instructions-collection {
 			
-			padding: 70px 0 35px 100px;
+			padding: 70px 0 35px;
 			text-align: center;
+			margin: 0 auto;
 			@include Font(0, 0);
-			
+
 			&-clause {
 				
 				position: relative;
-				margin: 0 105px 0 0;
 				display: inline-block;
-				width: 130px;
+				margin: 0 0 0 52px;
 				@include posterizer(20px, normal);
 				color: #000;
 				text-align: left;
@@ -595,17 +614,28 @@ a, a:hover {
 					color: #fff;
 				}
 			}
-			&-one-clause:before {
+			&-one-clause {
 
-				content: '1.';
+				max-width: 130px;
+
+				&:before {
+
+					content: '1.';
+				}
 			}
-			&-two-clause:before {
+			&-two-clause{
 
-				content: '2.';
+				margin: 0 42px 0 94px;
+				max-width: 90px;
+
+				&:before {
+
+					content: '2.';
+				}
 			}
 			&-three-clause {
 				
-				margin-right: 0;
+				max-width: 140px;
 
 				&:before {
 
@@ -617,12 +647,22 @@ a, a:hover {
 			
 			position: relative;
 			margin: 0 auto;
-			padding: 0 0 0 100px;
-			width: 800px;
+			padding: 0;
+			max-width: 600px;
+			text-align: justify;
+
+			&:after {
+
+				content: "";
+				display: inline-block;
+				width: 100%;
+				height: 0;
+				overflow: hidden;
+			}
+
 			&-fieldset {
 
 				display: inline-block;
-				margin: 0 35px 0 0;
 				vertical-align: top;
 
 				&-field-title {
@@ -649,6 +689,12 @@ a, a:hover {
 					}
 				}
 			}
+
+			&-submit-fieldset {
+
+				text-align: center;
+			}
+
 			&-pay-link {
 
 				position: relative;
@@ -670,7 +716,7 @@ a, a:hover {
 					top: 50%;
 					right: 18px;
 					margin-top: -14px;
-					width: 122px;
+					width: 130px;
 					@include BaseFont(14px, 14px);
 					text-align: left;
 					color: #fff;
@@ -678,7 +724,6 @@ a, a:hover {
 			}
 			&-link {
 
-				margin: 0 0 0 36px;
 				@include BaseFont(14px, 14px);
 				color: #000;
 

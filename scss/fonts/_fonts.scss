@@ -22,7 +22,7 @@
 
 @mixin BaseFont($font-size, $line-height) {
 
-	font-family: "Helvetica", Arial, sans-serif;
+	font-family: "Helvetica Neue", Arial, sans-serif;
 	font-weight: normal;
 	font-size: $font-size;
 	line-height: $line-height;
