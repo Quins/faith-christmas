@@ -123,7 +123,6 @@ body, input, textarea, select, button {
   font-family: Arial, sans-serif; }
 
 html {
-  height: auto;
   height: 100%; }
 
 body {
@@ -219,6 +218,31 @@ a, a:hover {
   position: relative;
   background-color: #e8dfc5; }
 
+main {
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 187px 0 85px;
+  margin: -187px 0 -85px; }
+
+.b-button {
+  display: inline-block;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  padding: 10px 20px;
+  border-radius: 4px;
+  color: #fff;
+  background: #ff0000; }
+  .b-button:hover {
+    opacity: .6; }
+
+.b-check-button {
+  display: block;
+  width: 140px;
+  text-align: center;
+  margin: 20px auto 0; }
+
 .b-header-title {
   position: relative;
   display: inline-block;
@@ -229,6 +253,9 @@ a, a:hover {
   background: transparent url(../i/graphics.png) no-repeat 0 0;
   vertical-align: bottom;
   z-index: 5; }
+  .b-header-title-link {
+    display: block;
+    height: 100%; }
 .b-header-description {
   position: relative;
   display: inline-block;
@@ -237,13 +264,12 @@ a, a:hover {
   font-weight: normal;
   font-size: 20px;
   line-height: 20px;
-  color: #fff;
+  color: #303030;
   vertical-align: bottom;
-  background-color: #ff0000;
   z-index: 5; }
   .b-header-description:after, .b-header-description:before {
     position: absolute;
-    content: '';
+    /* content: ''; */
     top: 0;
     border-top: 35px solid #ff0000;
     border-bottom: 35px solid #ff0000; }
@@ -268,7 +294,7 @@ a, a:hover {
   font-weight: normal;
   font-size: 97px;
   line-height: normal;
-  color: #ff0000;
+  color: #0b77c3;
   text-align: center; }
 .b-intro-section-pillars-collection {
   margin: 0 auto;
@@ -309,15 +335,64 @@ a, a:hover {
   line-height: 40px;
   color: #ff0000;
   text-align: center; }
-  .b-intro-section-paragraph:after {
-    position: absolute;
-    content: '';
-    left: 50%;
-    margin-left: -25px;
-    bottom: -60px;
-    width: 50px;
-    height: 32px;
-    background: transparent url(../i/graphics.png) no-repeat -153px 0; }
+  .b-intro-section-paragraph a {
+    color: #ff0000;
+    text-decoration: none; }
+    .b-intro-section-paragraph a:after {
+      position: absolute;
+      content: '';
+      left: 50%;
+      margin-left: -25px;
+      bottom: -60px;
+      width: 50px;
+      height: 32px;
+      background: transparent url(../i/graphics.png) no-repeat -153px 0; }
+
+.b-thankyou-section-background-section {
+  position: absolute;
+  content: '';
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 85px; }
+.b-thankyou-section-title {
+  position: relative;
+  padding: 0 0 10px;
+  font-family: "posterizer_kg_roundedregular", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 97px;
+  line-height: normal;
+  color: #ff0000;
+  text-align: center; }
+.b-thankyou-section-description {
+  font-family: "posterizer_kg_roundedregular", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 32px;
+  line-height: 40px;
+  max-width: 600px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  padding: 0 0 20px; }
+.b-thankyou-section-contents {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+  position: relative; }
+  .b-thankyou-section-contents-paragraph {
+    padding: 0 0 10px; }
+  .b-thankyou-section-contents-link, .b-thankyou-section-contents a {
+    color: #ff0000;
+    text-decoration: none;
+    border-bottom: 1px solid transparent; }
+    .b-thankyou-section-contents-link:hover, .b-thankyou-section-contents a:hover {
+      border-bottom-color: #ff0000; }
+  .b-thankyou-section-contents .b-button {
+    color: #fff;
+    border: none; }
 
 .b-painting-section-pictures-collection {
   margin: 0 auto;
@@ -572,11 +647,11 @@ a, a:hover {
   text-align: right; }
   .b-footer-contents-logos-collection {
     display: inline-block;
-    padding: 18px 72px 10px 10px;
+    padding: 20px 30px 10px;
     background-color: #fff; }
     .b-footer-contents-logos-collection-clause {
       display: inline-block;
-      padding: 0 0 0 40px;
+      padding: 0 20px;
       vertical-align: middle; }
       .b-footer-contents-logos-collection-clause-link {
         display: block; }
@@ -742,4 +817,3 @@ a, a:hover {
     content: "";
     width: 100%;
     height: 0; }
-

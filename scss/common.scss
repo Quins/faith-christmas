@@ -12,7 +12,6 @@ body, input, textarea, select, button {
 
 html {
 
-	height: auto;
 	height: 100%;
 }
 
@@ -132,8 +131,39 @@ a, a:hover {
 	background-color: #e8dfc5;
 }
 
+main {
+
+	min-height: 100%;
+	box-sizing: border-box;
+	padding: 187px 0 85px;
+	margin: -187px 0 -85px;
+}
+
 
  // block-style 
+
+.b-button {
+
+	display: inline-block;
+	@include BaseFont(16px, 20px);
+	padding: 10px 20px;
+	border-radius: 4px;
+	color: #fff;
+	background: $color-mark;
+
+	&:hover {
+
+		opacity: .6;
+	}
+}
+
+.b-check-button {
+
+	display: block;
+	width: 140px;
+	text-align: center;
+	margin: 20px auto 0;
+}
 
  .b-header {
 
@@ -148,22 +178,28 @@ a, a:hover {
 		@include graphics(0, 0);
 		vertical-align: bottom;
 		z-index: 5;
+
+		&-link {
+
+			display: block;
+			height: 100%;
+		}
 	}
 	&-description {
 
-		 position: relative;
-		 display: inline-block;
-		 padding: 25px 100px 25px 25px;
-		 @include BaseFont(20px,20px);
-		 color: #fff;
-		 vertical-align: bottom;
-		 background-color: $color-mark;
-		 z-index: 5;
+		position: relative;
+		display: inline-block;
+		padding: 25px 100px 25px 25px;
+		@include BaseFont(20px,20px);
+		color: #303030;
+		vertical-align: bottom;
+		//background-color: $color-mark;
+		z-index: 5;
 
 		&:after, &:before {
 
 			position: absolute;
-			content: '';
+			/* content: ''; */
 			top: 0;
 			border-top: 35px solid $color-mark;
 			border-bottom: 35px solid $color-mark;
@@ -195,7 +231,7 @@ a, a:hover {
 		position: relative;
 		padding: 0 0 30px;
 		@include posterizer(97px, normal);
-		color: $color-mark;
+		color: #0b77c3;
 		text-align: center;
 	}
 	&-pillars-collection {
@@ -243,18 +279,82 @@ a, a:hover {
 			color: $color-mark;
 			text-align: center;
 
-			&:after {
+			a {
 
-				position: absolute;
-				content: '';
-				left: 50%;
-				margin-left: -25px;
-				bottom: -60px;
-				width: 50px;
-				height: 32px;
-				@include graphics(-153px, 0);
+				color: $color-mark;
+				text-decoration: none;
+				&:after {
+
+					position: absolute;
+					content: '';
+					left: 50%;
+					margin-left: -25px;
+					bottom: -60px;
+					width: 50px;
+					height: 32px;
+					@include graphics(-153px, 0);
+				}
 			}
 		}
+}
+.b-thankyou-section {
+
+	&-background-section {
+
+		position: absolute;
+		content: '';
+		top: 0;
+		left: 0;
+		right: 0;
+		bottom: 85px;
+	}
+	&-title {
+
+		position: relative;
+		padding: 0 0 10px;
+		@include posterizer(97px, normal);
+		color: $color-mark;
+		text-align: center;
+	}
+	&-description {
+
+		@include posterizer(32px, 40px);
+		max-width: 600px;
+		margin: 0 auto;
+		text-align: center;
+		position: relative;
+		padding: 0 0 20px;
+	}
+	&-contents {
+
+		@include BaseFont(16px, 20px);
+		max-width: 600px;
+		margin: 0 auto;
+		position: relative;
+
+		&-paragraph {
+			
+			padding: 0 0 10px;
+		}
+
+		&-link, a {
+
+			color: $color-mark;
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+
+			&:hover {
+
+				border-bottom-color: $color-mark;
+			}
+		}
+
+		.b-button {
+
+			color: #fff;
+			border: none;
+		}
+	}
 }
 .b-painting-section {
 
@@ -559,18 +659,19 @@ a, a:hover {
 	&-logos-collection {
 		
 		display: inline-block;
-		padding: 18px 72px 10px 10px;
+		padding: 20px 30px 10px;
 		background-color: #fff;
 		
 		&-clause {
 		
 			display: inline-block;
-			padding: 0 0 0 40px;
+			padding: 0 20px;
 			vertical-align: middle;
 
 			&-link {
 				display: block;
 			}
+
 			&-picture {
 				max-width: 100%;
 			}
